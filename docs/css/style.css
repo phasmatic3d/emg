@@ -252,6 +252,11 @@ sub, sup {
     width: 250px;
 }
 
+.team-member h2 {
+    padding: 0;
+    margin: 0;
+}
+
 .team-member img {
     width: 128px;
     height: 128px;
