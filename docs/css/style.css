@@ -1,0 +1,248 @@
+.container {
+    height: 100%;
+    width: 60%;
+    margin: auto;
+}
+.container2 {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+.abstract {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+.caption {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 14pt;
+}
+
+.paragraph {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.section {
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: baseline;
+    font-size: 20pt;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.subsection {
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: baseline;
+    font-size: 16pt;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ref_link {}
+
+
+.citation {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 85%;
+    overflow: auto;
+    background-color: #f5f5f5;
+}
+
+.citation-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: pre-wrap;
+    overflow: auto;
+    word-break: normal;
+    word-wrap: normal;
+    white-space: pre;
+    border: none;
+}
+
+.event {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28pt;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.authors {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.author {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    display: inline-block;
+    font-size: 24pt;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.organizations {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.organization {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    display: inline-block;
+    font-size: 20pt;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.teaser-container {
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding-top: 20px;
+}
+
+.teaser-image {
+    max-width: 100%;
+}
+
+.orcid {
+    vertical-align: baseline;
+    width: 20px;
+}
+
+.footer-container {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center; 
+    background-color: rgb(118, 33, 36); 
+    color: white;
+}
+
+.resource-icon {
+    width: 25px;
+    vertical-align: middle;
+}
+.resource-text {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: normal;
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.header-container {
+    background-color: rgb(118, 33, 36);
+    color: white;
+}
+.header-text {
+    padding-left: 20px; 
+    font-size: 28pt; 
+    font-family: 'Roboto', sans-serif; 
+    text-align: center; 
+    vertical-align: middle;
+}
+.header-text2 {
+    padding-right: 20px; 
+    padding-left: 10px;
+    float: right;
+    font-size: 28pt; 
+    font-family: 'Roboto', sans-serif; 
+    vertical-align: middle;
+}
+.header-image {
+    vertical-align: middle;
+}
+
+.header-image2 {
+    float: right;
+}
+
+.footer-text {
+    background-color: rgb(118, 33, 36); 
+    padding: 10px;
+}
+.footer-text:before {
+    content: "Copyright © 2021 Computer Graphics Group AUEB"
+}
+
+.footer-text2 {
+    background-color: rgb(118, 33, 36); 
+    padding: 10px;
+}
+.footer-text2:before {
+    content: "Copyright © 2021 Computer Graphics Group AUEB - Phasmatic"
+}
+
+sub, sup {
+    top: -0.5em;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 22%;
+    margin: 10px;
+    border:1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    float: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.content > a img{
+    width: 100%;
+    height: auto;
+}
+
+.content > h3{
+    font-size: 14pt; 
+    text-align: center;
+}
+
+@media(max-width: 1000px){
+.content{
+width: 46%;
+}
+}
+@media(max-width: 750px){
+.content{
+width: 100%;
+}
+}
+ 

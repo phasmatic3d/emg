@@ -1,9 +1,121 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Epic Mega Grant</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <p>Langing Page for Epic Mega Grant proposal.</p>
+    <body style="padding: 0; margin:0">
+        <div class="container">
+            <div class="title">
+                LiFE - <u style="color:goldenrod">Li</u>ght <u style="color:goldenrod">F</u>ield <u style="color:goldenrod">E</u>ncoder 
+            </div>
+            <div class="authors">
+                <div class="author">
+                    Epic MegaGrant 2024-2025
+                </div>
+            </div>
+            <div class="organizations">
+                <div class="organization">
+                    **Organization - LOGO**
+                </div>
+            </div>
+            <div class="teaser-container">
+                <img class="teaser-image" src="images/architecture.png"/>
+            </div>
+            <div class="caption" style="font-size: 10pt; font-style: italic; padding-top: 0px">
+                Our proposed Unreal Engine module. During the training phase (top), the user is editing a geometric scene in the unreal editor. Using the associate auxiliary buffers and the native global illumination algorithm our training module
+                will optimize a set of Neural Network weights to predict the solution of the final global illumination. Then, during the inference phase (bottom), the user is able to export those weights to external devices, possibly with lower hardware capabilities,
+                 or use them in the unreal editor to predict the resulting illumination in real time for arbitrary viewports.
+            </div>
+            <div class="section">
+                Summary
+                <hr>
+            </div>
+            <div class="paragraph">
+                The goal of this project is to bring recent, ground-breaking research in neural light field encoding into Unreal Engine.
+                Inspired by the latest research breakthroughs such as Neural Radiance Caching [<a class="ref_link" target="_blank" href="https://research.nvidia.com/publication/2021-06_real-time-neural-radiance-caching-path-tracing">1</a>], Neural Graphics Primitives [<a class="ref_link" target="_blank" href="https://nvlabs.github.io/instant-ngp/">2</a>]
+                 and Active Exploration for Neural Global Illumination [<a class="ref_link" target="_blank" href="https://repo-sam.inria.fr/fungraph/active-exploration/">3</a>]
+                we believe that Unreal Engine’s graphics pipeline has an excellent toolset to support global illumination powered by neural representations.
+            </div>
+            <div class="subsection">
+                <u>Project Description</u> 
+                <br><br>
+                <div class="paragraph">
+                    Neural networks have shown great potential in encoding the light field of a scene and reconstructing it at runtime.
+                     Pretraining neural networks to handle novel, dynamic scenes is a generalization challenge that is currently very hard to handle. 
+                     State of the art research employs online learning where pre-training is completely replaced with active learning during actual rendering via scene exploration. 
+                     Although impressive results have been achieved, such approaches require significant computation capabilities and custom rendering systems in order to achieve high quality and good performance. 
+                     We will instead focus our efforts on pre-baking scene-specific neural network encodings that will be moderately fast to train and easy to evaluate at runtime within existing rendering pipelines.
+                    <br><br>
+                    To this end, we will attempt to leverage hierarchical data structures that are already part of the standard graphics pipeline and have been extensively researched. 
+                    We will take advantage of both spatial acceleration structures like Bounding Volume Hierarchies and frame specific auxiliary features, such as the image-data stored in the GBuffer exploiting the conventional rasterization pipeline. 
+                    Information baking has been standard practice in the graphics community and using neural networks as a highly accurate, precomputed representation of the radiance transfer within a scene has huge potential for the future. 
+                    Artists will be able to bake the static global illumination for parts of a larger scene into compact light field encoders that the engine will dynamically swap as the user moves around the scene.
+                    <br><br>
+                    The project is currently at the conceptual stage and we are requesting this Epic MegaGrant to jumpstart our endeavor. 
+                    Research results have shown that neural networks are able to accurately encode energy exchange in a scene. This project’s goal is to assess and adapt this encoding and reconstruction process for the pipeline of modern game engines. 
+                    This is the primary reason we choose Unreal Engine for our Proof-of-Concept. 
+                    <br><br>
+                    We are looking to bring the potential of Light Field learning and fully adapt it to the Unreal Engine pipeline giving a powerful tool to the rich ecosystem of Unreal Engine. 
+                    The funding for this project will be allocated to the creation of a proof of concept. A light field encoder does not clash with existing light transport solvers like Lumen or Path Traced global illumination and does not invalidate post processing effects like denoising. 
+                    On the contrary, it can be used in conjunction with those to deliver results even faster on a wide range of devices that are capable of running a neural network. 
+                    The tool will be directly developed within Unreal using Unreal Engine's Path Tracing module or Lumen in order to make sure that the resulting trained light field network encodes the Unreal feel. 
+                    This is not a method that aims to replace standard deterministic path tracing but rather complement existing pipelines with global illumination for complex light phenomena through a fast to evaluate neural network.  
+                </div>
+            </div>
+            <div class="subsection">
+                <u>Team</u>
+                <br><br>
+                <div class="paragraph">
+                Our team possesses an unwavering passion about computer graphics with each member having a level of expertise and knowledge at doctoral level and beyond in this field. 
+                This comes with an extensive background in research and contributions in the context of acceleration data structures [<a class="ref_link" target="_blank" href="https://onlinelibrary.wiley.com/doi/10.1111/cgf.14758">4</a>] 
+                neural networks for graphics related tasks [<a class="ref_link" target="_blank", href="http://graphics.cs.aueb.gr/graphics/docs/papers/BIM3DOR.pdf">5</a>] 
+                [<a class="ref_link" target="_blank", href="http://graphics.cs.aueb.gr/graphics/docs/papers/DeepOIT.pdf">6</a>] and more recently, 
+                the cross-section of the two [<a class="ref_link" target="_blank", href="https://link.springer.com/article/10.1007/s00371-023-02975-y">7</a>].
+                Members are also very familiar with the Unreal Engine best practices and graphics pipeline as we have used it for development during the Nationally funded project LOTUS [<a class="ref_link" target="_blank", href="https://lotus.aueb.gr/">8</a>]
+                which led to a publication in the CGI 2023 conference [<a class="ref_link" target="_blank", href="http://graphics.cs.aueb.gr/graphics/docs/papers/opening_design_VRIH.pdf">9</a>].
+                <br><br>
+                Notably, members of the group have co-founded Phasmatic, a company that delivers high-performance rendering solutions for the Web.
+                The sandboxed environment of these platforms stands as an ideal setting for a neural radiance cache method to shine.
+                Leveraging our collective expertise, we aspire to showcase the capabilities of this method through Phasmatic’s Web viewer, powered by the unparalleled realism of Unreal Engine.
+                <br><br>
+                Encoding and delivering the distinctive “Unreal” aesthetic through our Web viewer, will certainly elevate the company’s offerings and establish a new standard in the vibrant community of artists, 
+                through web-based photorealistic rendering solutions.
+                </div>
+            </div>
+            <div class="section">
+                References
+                <hr>
+                <div class="paragraph">
+                <b>[1]</b> MÜLLER T., ROUSSELLE F., NOVÁK J., KELLER A.: Real-time neural radiance caching for path tracing. ACM Trans. Graph. 40, 4 (jul 2021).
+                </div>
+                <div class="paragraph">
+                <b>[2]</b> MÜLLER T., EVANS A., SCHIED C., KELLER A.: Instant neural graphics primitives with a multiresolution hash encoding. ACM Trans. Graph. 41, 4 (jul 2022).
+                </div>
+                <div class="paragraph">
+                <b>[3]</b> DIOLATZIS S., PHILIP J., DRETTAKIS G.: Active exploration for neural global illumination of variable scenes. ACM Trans. Graph. 41, 5 (may 2022).
+                </div>
+                <div class="paragraph">
+                <b>[4]</b> VITSAS N., EVANGELOU I., PAPAIOANNOU G., GKARAVELIS A.: Parallel Transformation of Bounding Volume Hierarchies into Oriented Bounding Box Trees, Computer Graphics Forum (Proc. Eurographics), 42(2), pp. 245-254, 2023.
+                </div>
+                <div class="paragraph">
+                <b>[5]</b> EVANGELOU I., VITSAS N., PAPAIOANNOU G., GEORGIOUDAKIS M., CHATZISYMEON A.: Eurographics Workshop on 3D Object Retrieval (3DOR) 2021 short papers.
+                </div>
+                <div class="paragraph">
+                <b>[6]</b> TSOPOURIDI G., FUDOS I., VASILAKIS A.A., GEORGIOUDAKIS M., CHATZISYMEON A.: Deep Hybrid Order-Independent Transparency.
+                </div>
+                <div class="paragraph">
+                <b>[7]</b> EVANGELOU I., PAPAIOANNOU G., VARDIS K. GKARAVELIS A.: A neural builder for spatial subdivision hierarchies. Vis Comput 39, 3797–3809 (2023).
+                </div>
+                <div class="paragraph">
+                <b>[8]</b> LOTUS: Light Optimization for Urban Spaces.
+                </div>
+                <div class="paragraph">
+                <b>[9]</b> VITSAS N., EVANGELOU I., PAPAIOANNOU G., GKARAVELIS A.: A neural builder for spatial subdivision hierarchies. Vis Comput 39, 3797–3809 (2023).
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-text2"></div>
+        </div>
     </body>
 </html>
