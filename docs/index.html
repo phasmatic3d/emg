@@ -2,32 +2,35 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     </head>
     <body style="padding: 0; margin:0">
         <div class="container">
             <div class="title">
-                LiFE - <u style="color:goldenrod">Li</u>ght <u style="color:goldenrod">F</u>ield <u style="color:goldenrod">E</u>ncoder 
-            </div>
-            <div class="authors">
-                <div class="author">
-                    Epic MegaGrant 2024-2025
-                </div>
+                LiFE - <u style="color: #f89938">Li</u>ght <u style="color: #f89938">F</u>ield <u style="color: #f89938">E</u>ncoder 
             </div>
             <div class="organizations">
                 <div class="organization">
-                    **Organization - LOGO**
+                    <img src="images/PHALogo.svg" alt="Phasmatic">
+                </div>
+                <div class="organization">
+                    <img class="organization" src="images/CG-shadow.png" alt="Computer Graphics AUEB">
+                </div>
+            </div>
+            <div class="authors">
+                <div class="author">
+                    Epic MegaGrant Submission Landing Page
                 </div>
             </div>
             <div class="teaser-container">
                 <img class="teaser-image" src="images/architecture.png"/>
             </div>
-            <div class="caption" style="font-size: 10pt; font-style: italic; padding-top: 0px">
-                Our proposed Unreal Engine module. During the training phase (top), the user is editing a geometric scene in the unreal editor. Using the associate auxiliary buffers and the native global illumination algorithm our training module
-                will optimize a set of Neural Network weights to predict the solution of the final global illumination. Then, during the inference phase (bottom), the user is able to export those weights to external devices, possibly with lower hardware capabilities,
-                 or use them in the unreal editor to predict the resulting illumination in real time for arbitrary viewports.
+            <div class="caption" style="font-size: 12pt; font-style: italic; padding-top: 0px">
+                Our proposed Unreal Engine module. During the training phase (top), the user is editing a geometric scene in the Unreal Editor. Using the associated auxiliary buffers and the native global illumination algorithm our training module
+                will optimize a set of Neural Network weights to encode a representation of the scene's radiance field. At inference (bottom), the user is able to export those weights and use them in the Unreal Engine to infer the resulting illumination in real time for arbitrary viewports or even execute the module on external devices, possibly with lower hardware capabilities.
             </div>
             <div class="section">
-                Summary
+                Overview
                 <hr>
             </div>
             <div class="paragraph">
@@ -50,7 +53,9 @@
                     We will take advantage of both spatial acceleration structures like Bounding Volume Hierarchies and frame specific auxiliary features, such as the image-data stored in the GBuffer exploiting the conventional rasterization pipeline. 
                     Information baking has been standard practice in the graphics community and using neural networks as a highly accurate, precomputed representation of the radiance transfer within a scene has huge potential for the future. 
                     Artists will be able to bake the static global illumination for parts of a larger scene into compact light field encoders that the engine will dynamically swap as the user moves around the scene.
-                    <br><br>
+                    <div class="subsection">
+                        <u>Project Plan</u> 
+                    </div>
                     The project is currently at the conceptual stage and we are requesting this Epic MegaGrant to jumpstart our endeavor. 
                     Research results have shown that neural networks are able to accurately encode energy exchange in a scene. This project’s goal is to assess and adapt this encoding and reconstruction process for the pipeline of modern game engines. 
                     This is the primary reason we choose Unreal Engine for our Proof-of-Concept. 
@@ -62,26 +67,117 @@
                     This is not a method that aims to replace standard deterministic path tracing but rather complement existing pipelines with global illumination for complex light phenomena through a fast to evaluate neural network.  
                 </div>
             </div>
-            <div class="subsection">
-                <u>Team</u>
-                <br><br>
-                <div class="paragraph">
-                Our team possesses an unwavering passion about computer graphics with each member having a level of expertise and knowledge at doctoral level and beyond in this field. 
-                This comes with an extensive background in research and contributions in the context of acceleration data structures [<a class="ref_link" target="_blank" href="https://onlinelibrary.wiley.com/doi/10.1111/cgf.14758">4</a>] 
-                neural networks for graphics related tasks [<a class="ref_link" target="_blank", href="http://graphics.cs.aueb.gr/graphics/docs/papers/BIM3DOR.pdf">5</a>] 
-                [<a class="ref_link" target="_blank", href="http://graphics.cs.aueb.gr/graphics/docs/papers/DeepOIT.pdf">6</a>] and more recently, 
-                the cross-section of the two [<a class="ref_link" target="_blank", href="https://link.springer.com/article/10.1007/s00371-023-02975-y">7</a>].
-                Members are also very familiar with the Unreal Engine best practices and graphics pipeline as we have used it for development during the Nationally funded project LOTUS [<a class="ref_link" target="_blank", href="https://lotus.aueb.gr/">8</a>]
-                which led to a publication in the CGI 2023 conference [<a class="ref_link" target="_blank", href="http://graphics.cs.aueb.gr/graphics/docs/papers/opening_design_VRIH.pdf">9</a>].
-                <br><br>
-                Notably, members of the group have co-founded Phasmatic, a company that delivers high-performance rendering solutions for the Web.
-                The sandboxed environment of these platforms stands as an ideal setting for a neural radiance cache method to shine.
-                Leveraging our collective expertise, we aspire to showcase the capabilities of this method through Phasmatic’s Web viewer, powered by the unparalleled realism of Unreal Engine.
-                <br><br>
-                Encoding and delivering the distinctive “Unreal” aesthetic through our Web viewer, will certainly elevate the company’s offerings and establish a new standard in the vibrant community of artists, 
-                through web-based photorealistic rendering solutions.
-                </div>
+            <div class="section">
+                Team
+                <hr>
             </div>
+        
+            <div class="paragraph">
+            The team brings together 2 senior researchers/software engineers (Andreas-Alexandros Vasilakis, Anastasios Gkaravelis), 2 researchers/software engineers (Nikolaos Vitsas, Iordanis Evangelou) and 1 faculty member (Giorgos Papaioannou), all associated with the <a target="_blank" href="http://graphics.cs.aueb.gr/graphics">AUEB Computer Graphics Group</a>, the leading research team in Greece in image synthesis. 
+            <div class="subsection">
+                <u>Expertise</u> 
+            </div>
+            It is well balanced in terms of the distribution among research, development, evaluation and exploitation activities having successfully assisted in the coordination and implementation of several research projects relevant to the implementation of the proposed work. The group is composed of software engineers with extensive experience in the industry having delivered projects in 3D graphics engines and software visualization tools. 
+            <br><br>
+            Our team possesses an unwavering passion about computer graphics with each member having a level of expertise and knowledge at doctoral level and beyond in this field. 
+            This comes with an extensive background in research and contributions in the context of acceleration data structures [<a class="ref_link" target="_blank" href="https://onlinelibrary.wiley.com/doi/10.1111/cgf.14758">4</a>] 
+            neural networks for graphics related tasks [<a class="ref_link" target="_blank", href="http://graphics.cs.aueb.gr/graphics/docs/papers/BIM3DOR.pdf">5</a>] 
+            [<a class="ref_link" target="_blank", href="http://graphics.cs.aueb.gr/graphics/docs/papers/DeepOIT.pdf">6</a>] [<a class="ref_link" target="_blank", href="https://arxiv.org/abs/2305.10197">9</a>] and more recently, 
+            the cross-section of the two [<a class="ref_link" target="_blank", href="https://link.springer.com/article/10.1007/s00371-023-02975-y">7</a>].
+            Members are also very familiar with the Unreal Engine best practices and graphics pipeline as we have used it for development during the Nationally funded project <a target="_blank" href="https://lotus.aueb.gr/">LOTUS</a>
+            which led to a publication in the CGI 2023 conference [<a class="ref_link" target="_blank", href="http://graphics.cs.aueb.gr/graphics/docs/papers/opening_design_VRIH.pdf">8</a>].
+            <br><br>
+
+            <div class="subsection">
+                <u>Exploitation Plan</u> 
+            </div>
+                Notably, members of the group have co-founded <a target="_blank" href="https://www.phasmatic.com">Phasmatic</a>, a company that delivers high-performance rendering solutions for the Web. Delivering photorealistic quality is a key aspect of our offerings. Traditional methods for accurate global illumination like real-time path tracing are not suitable for the range of devices that our viewer targets. On the other hand, hardware-accelerated tensor operations for neural network evaluation are seeing wide adoption. The constrained environment of these platforms stands as an ideal setting for a neural radiance cache method to shine. Leveraging our collective expertise, we aspire to exploit and showcase the capabilities of this method through Phasmatic’s Web viewer, powered by Unreal Engine.
+                <br><br>
+                Encoding and delivering the distinctive “Unreal”-aesthetic through our Web viewer, will certainly elevate the company’s offerings and establish a new standard in the vibrant community of artists, through web-based photorealistic rendering solutions.
+            </div>
+            <br><br>
+            <div class="partner-wrapper">
+                <figure class="team-member">
+					<picture>
+						<source type="image/webp" srcset="images/vasilakis.jpg">
+						<img src="images/vasilakis.jpg" alt="">
+					</picture>
+					<figcaption>
+						<h2>Andreas A. Vasilakis</h2>
+						<br>
+						Senior Researcher/Co-founder
+						<br>
+						<a href="https://www.linkedin.com/in/nick-vitsas-b00473b7" class="fa fa-linkedin"></a>
+						<a href="https://twitter.com/NVitsas" class="fa fa-twitter"></a>
+						<a href="https://twitter.com/NVitsas" class="fa fa-github"></a>
+					</figcaption>
+                </figure>
+
+                <figure class="team-member">
+					<picture>
+						<source type="image/webp" srcset="images/anastasis.jpg">
+						<img src="images/anastasis.jpg" alt="">
+					</picture>
+					<figcaption>
+						<h2>Anastasios Gkaravelis</h2>
+						<br>
+						Senior Researcher/Co-founder
+						<br>
+						<a href="https://www.linkedin.com/in/nick-vitsas-b00473b7" class="fa fa-linkedin"></a>
+						<a href="https://twitter.com/NVitsas" class="fa fa-twitter"></a>
+						<a href="https://twitter.com/NVitsas" class="fa fa-github"></a>
+					</figcaption>
+                </figure>
+
+                <figure class="team-member">
+					<picture>
+						<source type="image/webp" srcset="images/ie.jpg">
+						<img src="images/ie.jpg" alt="">
+					</picture>
+					<figcaption>
+						<h2>Iordanis Evangelou</h2>
+						<br>
+						Researcher
+						<br>
+						<a href="https://www.linkedin.com/in/nick-vitsas-b00473b7" class="fa fa-linkedin"></a>
+						<a href="https://twitter.com/NVitsas" class="fa fa-twitter"></a>
+						<a href="https://twitter.com/NVitsas" class="fa fa-github"></a>
+					</figcaption>
+                </figure>
+
+                <figure class="team-member">
+					<picture>
+						<source type="image/webp" srcset="images/vitsas.png">
+						<img src="images/vitsas.png" alt="">
+					</picture>
+					<figcaption>
+						<h2>Nick Vitsas</h2>
+						<br>
+						Researcher/Co-founder
+						<br>
+						<a href="https://www.linkedin.com/in/nick-vitsas-b00473b7" class="fa fa-linkedin"></a>
+						<a href="https://twitter.com/NVitsas" class="fa fa-twitter"></a>
+						<a href="https://twitter.com/NVitsas" class="fa fa-github"></a>
+					</figcaption>
+                </figure>
+
+                <figure class="team-member">
+					<picture>
+						<source type="image/webp" srcset="images/gp.jpg">
+						<img src="images/gp.jpg" alt="">
+					</picture>
+					<figcaption>
+						<h2>Georgios Papaioannou</h2>
+						<br>
+						Research Advisor/Faculty Member
+						<br>
+						<a href="https://github.com/cgaueb" class="fa fa-github"></a>
+						<a href="http://graphics.cs.aueb.gr/graphics/index.html" class="fa fa-user"></a>
+					</figcaption>
+                </figure>
+
+            </div>
+
             <div class="section">
                 References
                 <hr>
@@ -101,21 +197,16 @@
                 <b>[5]</b> EVANGELOU I., VITSAS N., PAPAIOANNOU G., GEORGIOUDAKIS M., CHATZISYMEON A.: Eurographics Workshop on 3D Object Retrieval (3DOR) 2021 short papers.
                 </div>
                 <div class="paragraph">
-                <b>[6]</b> TSOPOURIDI G., FUDOS I., VASILAKIS A.A., GEORGIOUDAKIS M., CHATZISYMEON A.: Deep Hybrid Order-Independent Transparency.
+                <b>[6]</b> TSOPOURIDIS G., FUDOS I., VASILAKIS A.A.: Deep Hybrid Order-Independent Transparency.
                 </div>
                 <div class="paragraph">
                 <b>[7]</b> EVANGELOU I., PAPAIOANNOU G., VARDIS K. GKARAVELIS A.: A neural builder for spatial subdivision hierarchies. Vis Comput 39, 3797–3809 (2023).
                 </div>
                 <div class="paragraph">
-                <b>[8]</b> LOTUS: Light Optimization for Urban Spaces.
-                </div>
-                <div class="paragraph">
-                <b>[9]</b> VITSAS N., EVANGELOU I., PAPAIOANNOU G., GKARAVELIS A.: A neural builder for spatial subdivision hierarchies. Vis Comput 39, 3797–3809 (2023).
+                <b>[8]</b> VITSAS N., EVANGELOU I., PAPAIOANNOU G., GKARAVELIS A.:  Opening Design using Bayesian Optimization. Proc. Comp. Graphics International (2023).
+                <b>[9]</b> TSOPOURIDIS  G., VASILAKIS A.A., FUDOS I.: Deep and Fast Approximate Order Independent Transparency. arXiv 2305.10197 (2023).
                 </div>
             </div>
-        </div>
-        <div class="footer-container">
-            <div class="footer-text2"></div>
         </div>
     </body>
 </html>

@@ -115,6 +115,8 @@
     font-size: 20pt;
     padding-left: 10px;
     padding-right: 10px;
+    width: 64px;
+    height: 64px;
 }
 
 .teaser-container {
@@ -185,7 +187,7 @@
     padding: 10px;
 }
 .footer-text:before {
-    content: "Copyright © 2021 Computer Graphics Group AUEB"
+    content: ""
 }
 
 .footer-text2 {
@@ -193,7 +195,7 @@
     padding: 10px;
 }
 .footer-text2:before {
-    content: "Copyright © 2021 Computer Graphics Group AUEB - Phasmatic"
+    content: ""
 }
 
 sub, sup {
@@ -233,6 +235,82 @@ sub, sup {
 .content > h3{
     font-size: 14pt; 
     text-align: center;
+}
+
+.partner-wrapper {
+    flex-wrap: wrap;
+    margin: auto;
+    display: flex;
+    align-items: top;
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+}
+
+.team-member {
+    display: inline-block;
+    width: 250px;
+}
+
+.team-member img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+/* Style all font awesome icons */
+.fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+/* Add a hover effect if you want */
+.fa-twitter:hover {
+    opacity: 0.9;
+    background: #55ACEE;
+}
+
+.fa-linkedin:hover {
+    opacity: 0.9;
+    background: #007bb5;
+}
+
+.fa-github:hover {
+    opacity: 0.9;
+    background: #007bb5;
+}
+
+.fa-user:hover {
+    opacity: 0.9;
+    background: #ff4901;
+}
+
+/* Set a specific color for each brand */
+    
+/* Twitter */
+.fa-twitter {
+    background: black;
+    color: white;
+}
+
+.fa-github {
+    background: black;
+    color: white;
+}
+
+.fa-user {
+    background: black;
+    color: white;
+}
+
+
+.fa-linkedin {
+    background: black;
+    color: white;
 }
 
 @media(max-width: 1000px){
